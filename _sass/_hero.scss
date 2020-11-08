@@ -1,0 +1,98 @@
+
+.hero {
+  background: #FC477A;
+  overflow: hidden;
+  text-align: right;
+  margin-bottom: 8.5rem;
+
+
+  @media (max-width: 1130px) { 
+    margin-bottom: 7rem;
+  }
+
+  @media (max-width: 992px) { 
+    margin-bottom: 5rem;
+  }
+
+  @media (max-width: 768px) { 
+    margin-bottom: 4rem;
+  }
+
+  @media (max-width: 479px) {
+    padding-top: 1.5rem;
+  }
+
+  &__heading {
+    position: absolute;
+    font-size: 8.4rem;
+    font-weight: 800;
+    color: $white;
+    top: 20rem;
+    z-index: 2;
+
+    @media (max-width: 1130px) { 
+      left: 2rem;
+    }
+
+    @media (max-width: 992px) { 
+      font-size: 6rem;  
+    }
+   
+    @media (max-width: 768px) { 
+      font-size: 4rem;
+      top: 6rem;
+    }
+
+    @media (max-width: 479px) {
+      position: static;
+      width: 100%;
+      text-align: center;
+    }
+
+  }
+
+  &__subheading {
+    position: absolute;
+    font-size: 2.2rem;
+    text-align: left;
+    color: $black;
+    z-index: 2;
+    width: 46rem;
+    top: 40rem;
+
+    @media (max-width: 1130px) { 
+      left: 2rem;
+    }
+
+    @media (max-width: 992px) { 
+      width: 40rem;
+      top: 28rem;
+    }
+
+    @media (max-width: 768px) { 
+      width: 40rem;
+      top: 14rem;
+      font-size: 2rem;
+    }
+
+    @media (max-width: 479px) {
+      position: static;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+  }
+
+  &__img {
+    position: relative;
+    left: 16rem;
+    margin-bottom: -0.5rem;
+
+    @media (max-width: 479px) {
+      left: 0;
+    }
+
+  }
+
+}

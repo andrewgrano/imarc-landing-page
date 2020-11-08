@@ -1,0 +1,47 @@
+
+.footer {
+  &__logo {
+    margin-bottom: 1rem;
+
+    @media (max-width: 1130px) {
+      margin-left: 1rem;
+    }
+
+    @media (max-width: 479px) {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+}
+
+.subfooter {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+  font-size: 1.2rem;
+  border-top: .1rem solid $yellow;
+  padding-top: 2rem;
+  margin-bottom: 1rem;
+
+  @media (max-width: 1130px) { 
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  &__links {
+    li {
+      display: inline;
+      margin-right: 4rem;
+      
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        color: $gray-dark;
+        text-decoration: none;
+      }
+    }
+  }
+}

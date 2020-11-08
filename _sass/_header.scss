@@ -1,0 +1,171 @@
+
+.header {
+  padding: 1rem 0;
+  box-shadow: 0 0 6px 3px rgba(0,0,0,0.4);
+  position: relative;
+  z-index: 3;
+  position: fixed;
+  width: 100%;
+  background: $white;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 1130px) { 
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  &__logo {
+    margin-right: 9rem;
+
+    @media (max-width: 992px) { 
+      margin-right: 0;
+    }
+  }
+
+  &__nav {
+
+    @media (max-width: 768px) { 
+      display: none;
+    }
+
+    a {
+      color: $gray-dark;
+      text-decoration: none;
+      font-weight: 600;
+      margin-right: 6.5rem;
+
+      @media (max-width: 992px) { 
+        margin-right: 4rem;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+
+  &__btn {
+    margin-left: auto;
+
+    @media (max-width: 992px) { 
+      margin-left: 0;
+    }
+
+    @media (max-width: 768px) { 
+      display: none;
+    }
+
+    span {
+      position: relative;
+      padding-right: 1.3rem;
+
+      &:after {
+        content: " ";
+        width: 0; 
+        height: 0; 
+        border-top: .5rem solid transparent;
+        border-bottom: .5rem solid transparent;
+        border-left: .7rem solid $white;
+        position: absolute;
+        right: 0;
+        top: .5rem;
+      }
+    }
+  }
+
+  &__hamburgerMenu {
+    display: none;
+
+    @media (max-width: 768px) { 
+      display: block;
+    }
+
+    &:not(.collapsed) {
+      & + .header__mobileNav {
+        display: block;
+      }
+    }
+
+  }
+
+  &__mobileNav {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 7.5rem;
+    left: 0;
+    background: white;
+    text-align: center;
+
+    a {
+      display: block;
+      margin-bottom: 2rem;
+      color: $gray-dark;
+      font-size: 2rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  }
+}
+
+.hamburgerMenu {
+  border: none;
+  background: white;
+  padding: 1.5rem;
+  cursor: pointer;
+
+  .icon-bar {
+    background: $black;
+    position: relative;
+    display: block;
+    width: 2.2rem;
+    height: .2rem;
+    border-radius: .1rem;
+    transition: all 0.2s linear;
+
+    & + .icon-bar {
+      margin-top: 4px;
+    }
+
+    &.top-bar {
+      transform: rotate(45deg);
+      transform-origin: 10% 10%;
+    }
+
+    &.middle-bar {
+      opacity: 0;
+    }
+
+    &.bottom-bar {
+      transform: rotate(-45deg);
+      transform-origin: 10% 90%;
+    }
+  }
+
+  &.collapsed {
+    & .icon-bar.top-bar {
+      transform: rotate(0);
+    }
+
+    & .icon-bar.middle-bar {
+      opacity: 1;
+    }
+
+    & .icon-bar.bottom-bar {
+      transform: rotate(0);
+    }
+  } 
+}
+
+.header-spacer {
+  height: 7.5rem;
+}

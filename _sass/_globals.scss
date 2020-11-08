@@ -1,0 +1,49 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size:  1.6rem;
+  font-family: $defaultFont;
+  color: $gray-dark;
+}
+
+.container {
+  max-width: 111rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bg-pink {
+  background: $pink;
+}
+
+.bg-orange {
+  background: $orange;
+}
+
+.bg-yellow {
+  background: $yellow;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.rel {
+  position: relative;
+}
+
+.btn {
+  font-size: 1.5 rem;
+  background: $orange;
+  color: $white;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover {
+    background: darken( $orange, 15% )
+  }
+}

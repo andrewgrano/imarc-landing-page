@@ -1,0 +1,87 @@
+.knownFor {
+  margin-bottom: 8rem;
+
+  @media (max-width: 875px) { 
+    margin-bottom: 6rem;
+  }
+
+  @media (max-width: 479px) { 
+    margin-bottom: 3rem;
+  }
+
+  &__heading {
+    text-align: center;
+    font-size: 3.6rem;
+    font-weight: 500;
+    margin-bottom: 4.5rem;
+
+    @media (max-width: 479px) {
+      font-size: 2.8rem;
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-around;
+
+    @media (max-width: 875px) { 
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.knownForItem {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: $gray-dark;
+
+  @media (max-width: 875px) { 
+    margin-bottom: 2rem;
+  }
+
+  &:hover {
+    color: $orange;
+  }
+
+  &__icon {
+    margin-right: 2.5rem;
+
+    @media (max-width: 875px) { 
+      width: 8rem;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    max-width: 17rem;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    @media (max-width: 875px) { 
+      width: 29rem;
+      max-width: none;
+    }
+
+    @media (max-width: 480px) { 
+      width: 16rem;
+    }
+
+    span {
+      position: relative;
+
+      &:after {
+        content: " ";
+        width: 0; 
+        height: 0; 
+        border-top: .5rem solid transparent;
+        border-bottom: .5rem solid transparent;
+        border-left: .7rem solid $orange;
+        position: absolute;
+        right: -1.5rem;
+        top: .5rem;
+      }
+    }
+  }
+}

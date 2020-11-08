@@ -1,0 +1,139 @@
+
+.imgGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  height: 73.5rem;
+  grid-gap: .4rem;
+  margin-bottom: 3rem;
+
+  @media (max-width: 768px) {
+    height: 90rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  @media (max-width: 479px) {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &Item {
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+
+    @media (max-width: 479px) {
+      width: 35rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &:hover {
+      @media (min-width: 480px) {
+        .imgGridItem__inner {
+          padding-top: 70rem;
+        }
+      }
+    }
+
+    &__inner {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      padding: 1.5rem 2.5rem;
+      width: 100%;
+      transition: padding-top 0.7s ease;
+
+      @media (max-width: 479px) {
+        position: static;
+      }
+    }
+
+    &__heading {
+      color: $white;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 2.4rem;
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+
+    &__subheading {
+      color: $black;
+      font-size: 2rem;
+      font-weight: 700;
+
+      @media (max-width: 768px) {
+        font-size: 1.6rem;
+      }
+    }
+    
+
+    &.imgGridItem--leading {
+      grid-row-start: 1;
+      grid-row-end: 7;
+      background: url(../img/img-grid-leading.jpg) no-repeat top -.3rem center transparent;
+
+      @media (max-width: 768px) {
+        grid-row-start: 1;
+        grid-row-end: 5;
+        background-position: top -10rem center;
+      }
+    }
+
+    &.imgGridItem--developer {
+      grid-row-start: 1;
+      grid-row-end: 4;
+      background: url(../img/img-grid-developer.jpg) no-repeat top center transparent;
+    }
+
+    &.imgGridItem--harassment {
+      grid-row-start: 4;
+      grid-row-end: 7;
+      background: url(../img/img-grid-harassment.jpg) no-repeat top center transparent;
+    }
+
+    &.imgGridItem--security {
+      grid-row-start: 1;
+      grid-row-end: 3;
+      background: url(../img/img-grid-security.jpg) no-repeat top center transparent;
+      background-size: cover;
+    
+      @media (max-width: 768px) {
+        grid-row-start: 5;
+        grid-row-end: 7;
+      }
+    }
+
+    &.imgGridItem--management {
+      grid-row-start: 3;
+      grid-row-end: 5;
+      background: url(../img/img-grid-management.jpg) no-repeat top center transparent;
+      background-size: cover;
+
+      @media (max-width: 768px) {
+        grid-row-start: 7;
+        grid-row-end: 9;
+      }
+
+    }
+
+    &.imgGridItem--federal {
+      grid-row-start: 5;
+      grid-row-end: 7;
+      background: url(../img/img-grid-federal.jpg) no-repeat top center transparent;
+      background-size: cover;
+
+      @media (max-width: 768px) {
+        grid-row-start: 7;
+        grid-row-end: 9;
+      }
+
+    }
+
+  }
+}
